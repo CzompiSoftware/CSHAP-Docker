@@ -1,0 +1,37 @@
+version: '3.9'
+services:
+  node:
+    build: ./httpd
+    ports:
+      - "443:443"
+      - "80:80"
+    volumes:
+      # Location of {vhost}.conf files, that are usually located at `/etc/apache2/sites-enabled` on an Ubuntu Server
+      - ./enabled:/usr/local/apache2/conf/sites_enabled/
+      # Certificate location.
+      # - Create a folder named `certs` for public certificate storage
+      # - Create a folder named `private` for private certificate storage
+      - ./ssl:/apache-ssl
+      - ./logs:/apache-logs
+    volumes_from:
+      - fpm
+    depends_on:
+      - fpm
+    extra_hosts:
+      # This helps access other local-only docker stacks' shared ports
+      - "host.docker.internal:host-gateway"
+  
+  # Latest PHP
+  fpm:
+    image: php:fpm-alpine
+    volumes:
+      # Share same website locations to be able to render PHP files correctly. These two paths are mandatory
+      - ./sites:/apache-sites
+      # ^ This one is used for vhost's DocumentRoot
+      - ./errorpages:/apache-errors
+      # ^ This one is used for error handling. There's a GET parameter 's', that represents the current status code (eg.: 403 or 404)
+
+networks:
+  default:
+    driver: bridge
+    name: apache
