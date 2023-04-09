@@ -4,7 +4,6 @@ services:
     build: ./httpd
     ports:
       - "443:443"
-      - "80:80"
     volumes:
       # Location of {vhost}.conf files, that are usually located at `/etc/apache2/sites-enabled` on an Ubuntu Server
       - ./enabled:/usr/local/apache2/conf/sites_enabled/
@@ -24,6 +23,8 @@ services:
   # Latest PHP
   fpm:
     image: php:fpm-alpine
+    expose:
+      - 9000
     volumes:
       # Share same website locations to be able to render PHP files correctly. These two paths are mandatory
       - ./sites:/apache-sites
@@ -31,7 +32,13 @@ services:
       - ./errorpages:/apache-errors
       # ^ This one is used for error handling. There's a GET parameter 's', that represents the current status code (eg.: 403 or 404)
 
+  # Redirect http requests to https
+  redirect:
+    build: ./http-redirect
+    ports:
+      - "80:80"
+
 networks:
   default:
     driver: bridge
-    name: apache
+    name: webserver
