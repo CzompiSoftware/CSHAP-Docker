@@ -1,13 +1,19 @@
-FROM httpd:latest
+FROM httpd:alpine
 
 LABEL maintainer="Czompi Software (czompi@czompi.hu)"
+LABEL version="1.4"
 
 COPY httpd.conf /usr/local/apache2/conf/httpd.conf
 COPY httpd-ssl.conf /usr/local/apache2/conf/extra/httpd-ssl.conf
+COPY default.conf /usr/local/apache2/conf/sites_enabled/default.conf
 
 RUN mkdir -p /usr/local/apache2/conf/sites_enabled/
 
-EXPOSE 80
-EXPOSE 443
+VOLUME [ "/apache-logs" ]
+VOLUME [ "/apache-errors" ]
+VOLUME [ "/apache-ssl" ]
+VOLUME [ "/apache-sites" ]
+VOLUME [ "/usr/local/apache2/conf" ]
+VOLUME [ "/usr/local/apache2/conf/sites_enabled" ]
 
-CMD ["httpd", "-D", "FOREGROUND"]
+EXPOSE 443
