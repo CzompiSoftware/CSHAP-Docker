@@ -6,12 +6,13 @@ services:
       - "443:443"
     volumes:
       # Location of {vhost}.conf files, that are usually located at `/etc/apache2/sites-enabled` on an Ubuntu Server
-      - ./enabled:/usr/local/apache2/conf/sites_enabled/
+      - ./enabled:/usr/local/apache2/conf/sites_enabled
       # Certificate location.
       # - Create a folder named `certs` for public certificate storage
       # - Create a folder named `private` for private certificate storage
       - ./ssl:/apache-ssl
       - ./logs:/apache-logs
+      - /docker:/docker:ro
     volumes_from:
       - fpm
     depends_on:
