@@ -1,7 +1,7 @@
-FROM httpd:alpine
+FROM httpd:2.4.62-alpine
 
 LABEL maintainer="Czompi Software (czompi@czompi.hu)"
-LABEL version="1.5"
+LABEL version="1.5-2.4.62"
 
 COPY httpd.conf /usr/local/apache2/conf/httpd.conf
 COPY httpd-ssl.conf /usr/local/apache2/conf/extra/httpd-ssl.conf
