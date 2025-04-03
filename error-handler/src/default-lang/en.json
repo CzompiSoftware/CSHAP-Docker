@@ -1,0 +1,166 @@
+{
+    "400": {
+        "title": "Bad Request",
+        "desc": "The server could not understand your request due to invalid syntax."
+    },
+    "401": {
+        "title": "Unauthorized",
+        "desc": "You must be logged in to access this content or resource."
+    },
+    "402": {
+        "title": "Payment Required",
+        "desc": "This content is restricted to supporters only. Click below to support us: <a href=\"#dummylink\">PayPal</a>"
+    },
+    "403": {
+        "title": "Forbidden",
+        "desc": "You do not have permission to access this resource. Contact the administrator if you believe this is an error."
+    },
+    "404": {
+        "title": "Not Found",
+        "desc": "The requested page or resource could not be found. Please check the URL and try again."
+    },
+    "405": {
+        "title": "Method Not Allowed",
+        "desc": "The request method used is not supported for this resource."
+    },
+    "406": {
+        "title": "Not Acceptable",
+        "desc": "The requested resource cannot generate a response acceptable by the client."
+    },
+    "407": {
+        "title": "Proxy Authentication Required",
+        "desc": "You must authenticate with the proxy before accessing this resource."
+    },
+    "408": {
+        "title": "Request Timeout",
+        "desc": "The server timed out waiting for the request. Please try again."
+    },
+    "409": {
+        "title": "Conflict",
+        "desc": "The request could not be completed due to a conflict with the current state of the target resource."
+    },
+    "410": {
+        "title": "Gone",
+        "desc": "The requested resource is no longer available and will not be available again."
+    },
+    "411": {
+        "title": "Length Required",
+        "desc": "The server requires the Content-Length header to be defined."
+    },
+    "412": {
+        "title": "Precondition Failed",
+        "desc": "One or more conditions in the request header fields evaluated to false."
+    },
+    "413": {
+        "title": "Payload Too Large",
+        "desc": "The request entity is too large for the server to process."
+    },
+    "414": {
+        "title": "URI Too Long",
+        "desc": "The requested URI is too long for the server to handle."
+    },
+    "415": {
+        "title": "Unsupported Media Type",
+        "desc": "The server cannot process the request's media type."
+    },
+    "416": {
+        "title": "Range Not Satisfiable",
+        "desc": "The requested range is outside the bounds of the target resource."
+    },
+    "417": {
+        "title": "Expectation Failed",
+        "desc": "The server cannot meet the expectations indicated by the request."
+    },
+    "418": {
+        "title": "I'm a teapot",
+        "desc": "I'm a teapot and cannot brew coffee. (RFC 2324)"
+    },
+    "421": {
+        "title": "Misdirected Request",
+        "desc": "The request was directed to a server that is not able to produce a response."
+    },
+    "422": {
+        "title": "Unprocessable Entity",
+        "desc": "The request was well-formed but couldn't be processed."
+    },
+    "423": {
+        "title": "Locked",
+        "desc": "The resource is currently locked and cannot be accessed."
+    },
+    "424": {
+        "title": "Failed Dependency",
+        "desc": "The request failed due to a failure in a previous request."
+    },
+    "425": {
+        "title": "Too Early",
+        "desc": "The server is unwilling to risk processing a request that might be replayed."
+    },
+    "426": {
+        "title": "Upgrade Required",
+        "desc": "The client must switch to a different protocol to continue."
+    },
+    "428": {
+        "title": "Precondition Required",
+        "desc": "The server requires the request to be conditional."
+    },
+    "429": {
+        "title": "Too Many Requests",
+        "desc": "You have sent too many requests in a given amount of time. Please try again later."
+    },
+    "431": {
+        "title": "Request Header Fields Too Large",
+        "desc": "The server is unwilling to process the request because header fields are too large."
+    },
+    "451": {
+        "title": "Unavailable For Legal Reasons",
+        "desc": "The requested resource is unavailable due to legal restrictions."
+    },
+    "500": {
+        "title": "Internal Server Error",
+        "desc": "The server encountered an unexpected error and cannot complete your request."
+    },
+    "501": {
+        "title": "Not Implemented",
+        "desc": "The server does not support the functionality required to fulfill the request."
+    },
+    "502": {
+        "title": "Bad Gateway",
+        "desc": "The server received an invalid response from the upstream server."
+    },
+    "503": {
+        "title": "Service Unavailable",
+        "desc": "The server is currently unavailable due to overload or maintenance."
+    },
+    "504": {
+        "title": "Gateway Timeout",
+        "desc": "The server did not receive a timely response from the upstream server."
+    },
+    "505": {
+        "title": "HTTP Version Not Supported",
+        "desc": "The server does not support the HTTP version used in the request."
+    },
+    "506": {
+        "title": "Variant Also Negotiates",
+        "desc": "Transparent content negotiation for the request results in a circular reference."
+    },
+    "507": {
+        "title": "Insufficient Storage",
+        "desc": "The server cannot store the representation needed to complete the request."
+    },
+    "508": {
+        "title": "Loop Detected",
+        "desc": "The server detected an infinite loop while processing the request."
+    },
+    "510": {
+        "title": "Not Extended",
+        "desc": "Further extensions to the request are required for the server to fulfill it."
+    },
+    "511": {
+        "title": "Network Authentication Required",
+        "desc": "You need to authenticate to gain network access."
+    },
+    "-1": {
+        "title": "An Unexpected Error Occurred",
+        "desc": "Something went wrong on our end. Please try again or contact support if the issue persists."
+    }
+}

@@ -26,7 +26,7 @@ if (strlen($status_code) != 3) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="/assets/css/style.css"> -->
-    <title><?=$status_messages[$status_code]['title']['en'] ?? "Something went wrong"?> / <?=$status_messages[$status_code]['title']['hu'] ?? "Valami hiba történt"?> :: Czompi Software</title>
+    <title><?=$status_messages['en'][$status_code]['title'] ?? "Something went wrong"?> / <?=$status_messages['hu'][$status_code]['title'] ?? "Valami hiba történt"?> :: Czompi Software</title>
 <?php /*if ($status == 502 || $status == 503) {?>
     <meta http-equiv="refresh" content="5">
 <?php }*/ ?>
@@ -39,13 +39,13 @@ if (strlen($status_code) != 3) {
     <div class="content">
         <main>
             <div data-lang="en">
-                <h1><?=$status_messages[$status_code]['title']['en'] ?? "Something went wrong"?></h1>
-                <p><?=$status_messages[$status_code]['desc']['en'] ?? "Something went wrong in our end. Sorry for the incovinience."?></p>
+                <h1><?=$status_messages['en'][$status_code]['title'] ?? "Something went wrong"?></h1>
+                <p><?=$status_messages['en'][$status_code]['desc'] ?? "Something went wrong in our end. Sorry for the incovinience."?></p>
             </div>
             
             <div data-lang="hu">
-                <h1><?=$status_messages[$status_code]['title']['hu'] ?? "Valami hiba történt"?></h1>
-                <p><?=$status_messages[$status_code]['desc']['hu'] ?? "Valami hiba történt a mi oldalunkon. Az okozott kellemetlenségért elnézést kérünk."?></p>
+                <h1><?=$status_messages['hu'][$status_code]['title'] ?? "Valami hiba történt"?></h1>
+                <p><?=$status_messages['hu'][$status_code]['desc'] ?? "Valami hiba történt a mi oldalunkon. Az okozott kellemetlenségért elnézést kérünk."?></p>
             </div>
             <footer>
                 &copy; <a href="https://czsoft.hu">Czompi Software</a> <?=date("Y")?> 

@@ -1,0 +1,166 @@
+{
+    "400": {
+        "title": "Hibás kérés",
+        "desc": "A szerver nem tudta feldolgozni a kérését a hibás szintaxis miatt."
+    },
+    "401": {
+        "title": "Hitelesítés szükséges",
+        "desc": "A tartalom vagy erőforrás megtekintéséhez be kell jelentkeznie."
+    },
+    "402": {
+        "title": "Előfizetés szükséges",
+        "desc": "Ez a tartalom csak támogatóink számára elérhető. Támogatáshoz kattintson ide: <a href=\"#dummylink\">PayPal</a>"
+    },
+    "403": {
+        "title": "Hozzáférés megtagadva",
+        "desc": "Nincs jogosultsága a kért erőforrás eléréséhez. Ha úgy gondolja, hogy ez hiba, vegye fel a kapcsolatot az adminisztrátorral."
+    },
+    "404": {
+        "title": "Nem található",
+        "desc": "A kért oldal vagy erőforrás nem található. Kérjük, ellenőrizze a címet, és próbálja újra."
+    },
+    "405": {
+        "title": "Nem támogatott metódus",
+        "desc": "A kért metódus nem engedélyezett ennél az erőforrásnál."
+    },
+    "406": {
+        "title": "Nem elfogadható",
+        "desc": "A szerver nem tud olyan választ adni, amit a kliens elfogadna."
+    },
+    "407": {
+        "title": "Proxy hitelesítés szükséges",
+        "desc": "A hozzáféréshez előbb a proxy-n keresztül kell hitelesítenie magát."
+    },
+    "408": {
+        "title": "Időtúllépés",
+        "desc": "A szerver túl sokáig várt a kérésre, így megszakította azt. Kérjük, próbálja újra."
+    },
+    "409": {
+        "title": "Ütközés",
+        "desc": "A kérés ütközik a cél-erőforrás aktuális állapotával."
+    },
+    "410": {
+        "title": "Véglegesen eltávolítva",
+        "desc": "A keresett erőforrás véglegesen eltávolításra került és nem lesz újra elérhető."
+    },
+    "411": {
+        "title": "Hossz megadása szükséges",
+        "desc": "A szerver megköveteli a Content-Length fejléc megadását."
+    },
+    "412": {
+        "title": "Előfeltétel meghiúsult",
+        "desc": "Egy vagy több kérési feltétel nem teljesült."
+    },
+    "413": {
+        "title": "Túl nagy kérés",
+        "desc": "A kérés túl nagy ahhoz, hogy a szerver feldolgozza."
+    },
+    "414": {
+        "title": "Túl hosszú URI",
+        "desc": "A megadott URI túl hosszú, a szerver nem tudja feldolgozni."
+    },
+    "415": {
+        "title": "Nem támogatott médiaformátum",
+        "desc": "A kérés médiaformátuma nem támogatott."
+    },
+    "416": {
+        "title": "Nem kielégíthető tartomány",
+        "desc": "A megadott tartomány kívül esik az erőforrás határain."
+    },
+    "417": {
+        "title": "Várakozási hiba",
+        "desc": "A szerver nem tudja teljesíteni a kérés elvárásait."
+    },
+    "418": {
+        "title": "Teáskanna vagyok",
+        "desc": "Teáskanna vagyok, nem tudok kávét főzni. (RFC 2324)"
+    },
+    "421": {
+        "title": "Eltévedt kérés",
+        "desc": "A kérés nem megfelelő szerverhez lett irányítva."
+    },
+    "422": {
+        "title": "Nem feldolgozható entitás",
+        "desc": "A kérés helyesen lett megfogalmazva, de nem volt feldolgozható."
+    },
+    "423": {
+        "title": "Zárolva",
+        "desc": "Az erőforrás zárolva van, nem érhető el."
+    },
+    "424": {
+        "title": "Függőségi hiba",
+        "desc": "A kérés egy korábbi kérés hibája miatt nem hajtható végre."
+    },
+    "425": {
+        "title": "Túl korai",
+        "desc": "A szerver nem vállalja a kérés feldolgozását, mert azt újra lehetne küldeni."
+    },
+    "426": {
+        "title": "Frissítés szükséges",
+        "desc": "A kliensnek másik protokollra kell váltania a folytatáshoz."
+    },
+    "428": {
+        "title": "Előfeltétel szükséges",
+        "desc": "A szerver megköveteli, hogy a kérés feltételekhez legyen kötve."
+    },
+    "429": {
+        "title": "Túl sok kérés",
+        "desc": "Túl sok kérés érkezett rövid időn belül. Kérjük, próbálja meg később."
+    },
+    "431": {
+        "title": "Túl nagy fejlécmezők",
+        "desc": "A szerver nem dolgozza fel a kérést, mert a fejlécmezők túl nagyok."
+    },
+    "451": {
+        "title": "Jogi okokból nem elérhető",
+        "desc": "A kért tartalom jogi okok miatt nem érhető el."
+    },
+    "500": {
+        "title": "Belső szerverhiba",
+        "desc": "A szerver váratlan hibába ütközött, nem tudja végrehajtani a kérést."
+    },
+    "501": {
+        "title": "Nem implementált",
+        "desc": "A szerver nem támogatja a kérés végrehajtásához szükséges funkciót."
+    },
+    "502": {
+        "title": "Hibás átjáró",
+        "desc": "A szerver érvénytelen választ kapott az előző szervertől."
+    },
+    "503": {
+        "title": "Szolgáltatás nem elérhető",
+        "desc": "A szolgáltatás jelenleg nem elérhető, mert túlterhelt vagy karbantartás alatt áll."
+    },
+    "504": {
+        "title": "Átjáró időtúllépés",
+        "desc": "A szerver nem kapott időben választ a külső kiszolgálótól."
+    },
+    "505": {
+        "title": "Nem támogatott HTTP-verzió",
+        "desc": "A szerver nem támogatja a kérésben megadott HTTP-verziót."
+    },
+    "506": {
+        "title": "A változat is tárgyal",
+        "desc": "A tartalom egyeztetése körkörös hivatkozáshoz vezetett."
+    },
+    "507": {
+        "title": "Nincs elegendő tárhely",
+        "desc": "A szerver nem tudja eltárolni a kérés teljesítéséhez szükséges adatot."
+    },
+    "508": {
+        "title": "Hurok észlelve",
+        "desc": "A szerver végtelen ciklust észlelt a kérés feldolgozása közben."
+    },
+    "510": {
+        "title": "Nincs kiterjesztve",
+        "desc": "A kéréshez további kiterjesztések szükségesek, hogy a szerver teljesíteni tudja."
+    },
+    "511": {
+        "title": "Hálózati hitelesítés szükséges",
+        "desc": "Hálózati hozzáféréshez hitelesítés szükséges."
+    },
+    "-1": {
+        "title": "Váratlan hiba történt",
+        "desc": "Valami hiba történt a szerverünkön. Kérjük, próbálja újra, vagy lépjen kapcsolatba a támogatással."
+    }
+}
