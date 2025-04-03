@@ -4,19 +4,19 @@ require("translations.php");
 
 // echo var_dump($_GET);
 
-$status = htmlspecialchars($_GET['q']) ?? -1;
+$status_code = htmlspecialchars($_GET['q']) ?? -1;
 
 // echo $status;
-if (str_starts_with($status, "/")) {
-    $status = substr($status, 1);
+if (str_starts_with($status_code, "/")) {
+    $status_code = substr($status_code, 1);
 }
 
-if (str_ends_with($status, ".html")) {
-    $status = str_replace(".html", "", $status);
+if (str_ends_with($status_code, ".html")) {
+    $status_code = str_replace(".html", "", $status_code);
 }
 
-if (strlen($status) != 3) {
-    $status = -1;
+if (strlen($status_code) != 3) {
+    $status_code = -1;
 }
 
 ?><!DOCTYPE html>
@@ -26,7 +26,7 @@ if (strlen($status) != 3) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="/assets/css/style.css"> -->
-    <title><?=$status_title_en[$status] ?? "Something went wrong"?> / <?=$status_title_hu[$status] ?? "Valami hiba történt"?> :: Czompi Software</title>
+    <title><?=$status_messages[$status_code]['title']['en'] ?? "Something went wrong"?> / <?=$status_messages[$status_code]['title']['hu'] ?? "Valami hiba történt"?> :: Czompi Software</title>
 <?php /*if ($status == 502 || $status == 503) {?>
     <meta http-equiv="refresh" content="5">
 <?php }*/ ?>
@@ -39,13 +39,13 @@ if (strlen($status) != 3) {
     <div class="content">
         <main>
             <div data-lang="en">
-                <h1><?=$status_title_en[$status] ?? "Something went wrong"?></h1>
-                <p><?=$status_desc_en[$status] ?? "Something went wrong in our end. Sorry for the incovinience."?></p>
+                <h1><?=$status_messages[$status_code]['title']['en'] ?? "Something went wrong"?></h1>
+                <p><?=$status_messages[$status_code]['desc']['en'] ?? "Something went wrong in our end. Sorry for the incovinience."?></p>
             </div>
             
             <div data-lang="hu">
-                <h1><?=$status_title_hu[$status] ?? "Valami hiba történt"?></h1>
-                <p><?=$status_desc_hu[$status] ?? "Valami hiba történt a mi oldalunkon. Az okozott kellemetlenségért elnézést kérünk."?></p>
+                <h1><?=$status_messages[$status_code]['title']['hu'] ?? "Valami hiba történt"?></h1>
+                <p><?=$status_messages[$status_code]['desc']['hu'] ?? "Valami hiba történt a mi oldalunkon. Az okozott kellemetlenségért elnézést kérünk."?></p>
             </div>
             <footer>
                 &copy; <a href="https://czsoft.hu">Czompi Software</a> <?=date("Y")?> 
@@ -53,6 +53,6 @@ if (strlen($status) != 3) {
         </main>
     </div>
 </body>
-</html><?php if ($status == 502 || $status == 503) {
+</html><?php if ($status_code == 502 || $status_code == 503) {
     http_response_code(404);
 } ?>
